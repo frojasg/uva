@@ -28,18 +28,15 @@ class Main {
   }
 }
   class Pair implements Comparable<Pair> {
-    public String x;
+    public Integer x;
     public String value;
     public Pair(String x, String v) {
-      this.x = x;
+      this.x = Integer.parseInt(x);
       this.value = v;
     }
 
     public int compareTo(Pair p2) {
-      int x1 = Integer.parseInt(this.x);
-      int x2 = Integer.parseInt(p2.x);
-
-      return x1  - x2;
+      return this.x  - p2.x;
     }
 
   }
